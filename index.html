@@ -1,23 +1,63 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8" />
-  <title>Login</title>
-  <link rel="stylesheet" href="demo.css" />
-</head>
-<body class="bg">
+  <head>
+    <base target="_top" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title><?= appName ?> - Login</title>
+    <?!= include('demo.css'); ?>
+  </head>
 
-<div class="login-shell">
-  <div class="login-card">
-    <h1 class="h1">Login</h1>
+  <body class="bg">
+    <!-- ✅ Root único que se reemplaza con changePage() -->
+    <div id="app">
+      <div class="login-shell">
+        <div class="login-card">
+          <div class="brand">
+            <div class="logo">S</div>
+            <div>
+              <div class="brand-title"><?= appName ?></div>
+              <div class="brand-subtitle">Admin · Demo WebApp</div>
+            </div>
+          </div>
 
-    <input id="user" class="input" placeholder="usuario" />
-    <input id="pass" class="input" type="password" placeholder="password" />
+          <h1 class="h1">Iniciar sesión</h1>
+          <p class="muted">Demo: valida credenciales y va directo a checkouts.</p>
 
-    <button class="btn primary" onclick="login()">Entrar</button>
-  </div>
-</div>
+          <div id="errorBox" class="alert" style="display:none;"></div>
 
+          <form id="loginForm" class="form">
+            <label class="label">Usuario</label>
+            <input
+              class="input"
+              type="email"
+              id="username"
+              placeholder="demo"
+              autocomplete="username"
+              required
+            />
+
+            <label class="label">Contraseña</label>
+            <input
+              class="input"
+              type="password"
+              id="password"
+              placeholder="zaqxsw123"
+              autocomplete="current-password"
+              required
+            />
+
+            <button class="btn primary" onclick="login()">Entrar</button>
+          </form>
+
+          <div class="hint">
+            Credenciales demo:
+            <code>demo</code> / <code>zaqxsw123</code>
+          </div>
+        </div>
+      </div>
+    </div>
+    
 <script src="demo.js"></script>
 </body>
 </html>
+
