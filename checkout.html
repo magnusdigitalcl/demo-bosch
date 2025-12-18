@@ -6,6 +6,97 @@
   <link rel="stylesheet" href="demo.css" />
 </head>
 <body class="bg">
+<div class="app">
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <div class="logo small">S</div>
+      <div class="sidebar-title">SIDEKICK SPA</div>
+    </div>
+
+    <nav class="nav">
+      <a class="nav-item" href="#" aria-disabled="true">Dashboard</a>
+      <a class="nav-item" href="#" aria-disabled="true">Compañías</a>
+      <a class="nav-item active" href="#" aria-disabled="true">Checkouts</a>
+      <a class="nav-item" href="#" aria-disabled="true">Hooks Bsale</a>
+      <a class="nav-item" href="#" aria-disabled="true">Resumen Docs</a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div class="topbar-left">
+        <h1 class="page-title">Checkouts</h1>
+        <div class="status" id="statusText">Listo</div>
+      </div>
+
+      <div class="topbar-right">
+        <button class="btn ghost" type="button">Sincronizar órdenes</button>
+        <button class="btn ghost" type="button">Sync orden por ID</button>
+        <button class="btn ghost" type="button">Buscar orden antigua</button>
+
+        <button class="btn primary" id="btnDownload" type="button">Descargar Excel</button>
+        <button class="btn danger" id="btnLogout" type="button">Cerrar sesión</button>
+      </div>
+    </header>
+
+    <section class="card">
+      <div class="toolbar">
+        <div class="toolbar-left">
+          <span class="muted">Mostrar</span>
+          <select class="select" id="limitSelect" disabled>
+            <option selected>5</option>
+          </select>
+          <span class="muted">registros</span>
+        </div>
+
+        <div class="toolbar-right">
+          <label class="muted" for="searchInput">Buscar:</label>
+          <input class="input" id="searchInput" placeholder="24155106101-A" />
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Origen</th>
+              <th>N° Orden</th>
+              <th>Customer</th>
+              <th>Monto</th>
+              <th>Registro</th>
+              <th>Pago</th>
+              <th>CRM</th>
+            </tr>
+          </thead>
+          <tbody id="tbody">
+            <tr><td>742905</td><td>fcom</td><td>3214599372</td><td>stefany reyes</td><td>239980</td><td>28/11/2025 12:21:16</td><td>completed</td><td>true</td></tr>
+            <tr><td>742904</td><td>fcom</td><td>3214615734</td><td>ANTONIO VALERO</td><td>157980</td><td>28/11/2025 12:52:55</td><td>completed</td><td>true</td></tr>
+            <tr><td>742903</td><td>paris</td><td>3063140690</td><td>Milena Benavides</td><td>812980</td><td>28/11/2025 12:18:22</td><td>completed</td><td>false</td></tr>
+            <tr><td>742902</td><td>mercadolibre</td><td>2000010251018809</td><td>Cristian Soto H.</td><td>329990</td><td>28/11/2025 12:03:16</td><td>completed</td><td>true</td></tr>
+            <tr><td>742901</td><td>ripley</td><td>24155106101-A</td><td>Macarena Troncoso</td><td>209980</td><td>28/11/2025 11:54:05</td><td>completed</td><td>true</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+</div>
+    
+<script src="demo.js"></script>
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Checkouts</title>
+  <link rel="stylesheet" href="demo.css" />
+</head>
+<body class="bg">
 
 <div class="app">
   <aside class="sidebar">
@@ -16,15 +107,6 @@
   <main class="main">
     <h1 class="h1">Checkouts</h1>
 
-    <table class="table">
-      <tr><th>ID</th><th>Cliente</th><th>Monto</th></tr>
-      <tr><td>742905</td><td>Stefany Reyes</td><td>$239.980</td></tr>
-      <tr><td>742904</td><td>Antonio Valero</td><td>$157.980</td></tr>
-      <tr><td>742903</td><td>Milena Benavides</td><td>$812.980</td></tr>
-      <tr><td>742902</td><td>Juana Parra</td><td>$82.680</td></tr>
-      <tr><td>742901</td><td>George Hamilton</td><td>$999.980</td></tr>
-      <tr><td>742900</td><td>María del Rey</td><td>$312.990</td></tr>
-    </table>
 
     <br/>
     <!-- Cambia excel-demo.xlsx por tu archivo real -->
@@ -37,4 +119,5 @@
 <script src="demo.js"></script>
 </body>
 </html>
+
 
